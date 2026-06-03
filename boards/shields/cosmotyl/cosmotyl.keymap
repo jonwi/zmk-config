@@ -1,0 +1,61 @@
+// This file was generated from a template. Edit it to match your keyboard.
+// See https://zmk.dev/docs/development/hardware-integration/new-shield for more instructions.
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    // Define a default keymap here.
+    // See https://zmk.dev/docs/development/hardware-integration/new-shield#default-keymap.
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            //                                                                              | | 
+            bindings = <
+                                &kp NUMBER_2   &kp NUMBER_3   &kp NUMBER_4     &kp NUMBER_5     &kp NUMBER_6 &kp NUMBER_7      &kp NUMBER_8    &kp NUMBER_9
+                &kp NUMBER_1    &kp W          &kp E          &kp R            &kp T            &kp Y        &kp U             &kp I           &kp O           &kp NUMBER_10
+                &kp Q           &mt LEFT_GUI S &mt LEFT_ALT D &mt LEFT_SHIFT F &kp G            &kp H        &mt RIGHT_SHIFT J &mt RIGHT_ALT K &mt RIGHT_GUI L &kp p
+                &mt LEFT_CTRL A &kp X          &kp C          &kp V            &kp B            &kp N        &kp N             &kp COMMA       &kp PERIOD      &mt RIGHT_CTRL SEMICOLON
+                &kp Z           &kp ?          &kp ?                                                                           &kp ?           &kp ?           &kp /
+                RC(5, 0) RC(5, 1) RC(5, 2) RC(5, 3) RC(5, 4)    RC(5, 5) RC(5, 7) RC(5, 8) RC(5, 9) RC(5, 10)
+            >;
+        };
+
+        layer1 {
+            //                                                                          | | 
+            bindings = <
+                                &kp F2         &kp F3         &kp F4           &kp F5           &kp F8       &kp F9            &kp F10         &kp F11
+                &kp F1          &kp @          &kp |          &kp {            &kp }            &kp "        &kp 7             &kp 8           &kp 9           &kp F12
+                &kp !           &mt LEFT_GUI $ &mt LEFT_ALT \ &mt LEFT_SHIFT ( &kp )            &kp =        &mt RIGHT_SHIFT 4 &mt RIGHT_ALT 5 &mt RIGHT_GUI 6 &kp *
+                &mt LEFT_CTRL # &kp ^          &kp /          &kp [            &kp ]            &kp &        &kp 1             &kp 2           &kp 3           &mt RIGHT_CTRL +
+                &kp %           &trans         &trans                                                                          &trans          &trans          &kp \
+                RC(5, 0) RC(5, 1) RC(5, 2) RC(5, 3) RC(5, 4)    RC(5, 5) RC(5, 7) RC(5, 8) RC(5, 9) RC(5, 10)
+            >;
+        };
+
+        layer2 {
+            //                                    | | 
+            bindings = <
+                       &trans &trans &trans &trans     &trans &trans         &trans         &trans
+                &trans &trans &trans &trans &trans     &kp *  &kp ESC        &kp UP_ARROW   &trans          &trans
+                &trans &trans &trans &trans &trans     &kp -  &kp LEFT_ARROW &kp DOWN_ARROW &kp RIGHT_ARROW &trans
+                &trans &trans &trans &trans &trans     &kp &  &kp TAB        &kp "          &trans          &trans
+                &trans &trans &trans                                         &trans         &trans          &trans
+                RC(5, 0) RC(5, 1) RC(5, 2) RC(5, 3) RC(5, 4)    RC(5, 5) RC(5, 7) RC(5, 8) RC(5, 9) RC(5, 10)
+            >;
+        };
+
+        layer3 {
+            //                                    | | 
+            bindings = <
+                       &trans &trans &trans &trans     &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans     &trans &trans &trans &trans &trans
+                &trans &kp S  &kp D  &kp F  &trans     &trans &trans &trans &trans &trans
+                &kp A  &trans &trans &trans &trans     &trans &trans &tarns &trans &trans
+                &trans &trans &trans                                 &trans &trans &trans
+                RC(5, 0) RC(5, 1) RC(5, 2) RC(5, 3) RC(5, 4)    RC(5, 5) RC(5, 7) RC(5, 8) RC(5, 9) RC(5, 10)
+            >;
+        };
+    };
+};
