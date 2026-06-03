@@ -21,7 +21,7 @@
                 &kp Q           &mt LEFT_GUI S &mt LEFT_ALT D &mt LEFT_SHIFT F &kp G            &kp H        &mt RIGHT_SHIFT J &mt RIGHT_ALT K &mt RIGHT_GUI L &kp p
                 &mt LEFT_CTRL A &kp X          &kp C          &kp V            &kp B            &kp N        &kp N             &kp COMMA       &kp PERIOD      &mt RIGHT_CTRL SEMICOLON
                 &kp Z           &mkp MB4       &mkp MB1                                                                        &bt BT_PRV      &bt BT_NXT      &kp /
-                &kp BACKSPACE   &mo layer2     &kp HOME       &kp DELETE       &mo layer1       &lt SPACE layer1  &kp ENTER    &kp END         &mo layer2      &kp DELETE
+                &kp BACKSPACE   &mo 2          &kp HOME       &kp DELETE       &mo 1            &lt SPACE 1  &kp ENTER         &kp END         &mo 2           &kp DELETE
             >;
         };
 
