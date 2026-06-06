@@ -21,7 +21,7 @@
                 &kp Q         &mt LGUI S &mt LALT D &mt LSHIFT F &kp G         &kp H  &mt RSHIFT J &mt RALT K &mt RGUI L &kp P
                 &mt LCTRL A   &kp X      &kp C      &kp V        &kp B         &kp N  &kp M        &kp COMMA  &kp PERIOD &mt RCTRL SEMICOLON
                 &kp Z         &mkp MB4   &mkp MB1                                                  &bt BT_PRV &bt BT_NXT &kp FSLH
-                &kp BACKSPACE &mo 2      &kp HOME   &kp DELETE   &mo 1         &lt 1 SPACE &kp ENTER &kp END &kp DELETE &mo 2  
+                &kp BACKSPACE &mo 2      &kp HOME   &kp DELETE   &mo 1         &mo 2 &kp DELETE &kp END &kp ENTER &lt 1 SPACE 
             >;
         };
 
