@@ -1,23 +1,33 @@
-// See https://zmk.dev/docs/development/hardware-integration/physical-layouts
-// for how to configure this.
-
-#include <physical_layouts.dtsi>
+#include <dt-bindings/zmk/physical-layout.h>
 
 / {
-    default_layout: default_layout {
-        compatible = "zmk,physical-layout";
-        display-name = "Default Layout";
-        transform = <&default_transform>;
-        kscan = <&kscan>;
+    physical_layouts {
+        compatible = "zmk,physical-layouts";
 
-        // Edit this to define the positions and sizes of the keys, or remove it
-        // if your keyboard will not support ZMK Studio.
-        // https://zmk.dev/docs/development/hardware-integration/physical-layouts#optional-keys-property
-        keys  //                     w   h    x    y     rot    rx    ry
-            = <&key_physical_attrs 100 100    0    0       0     0     0>
-            , <&key_physical_attrs 100 100  100    0       0     0     0>
-            , <&key_physical_attrs 100 100    0  100       0     0     0>
-            , <&key_physical_attrs 100 100  100  100       0     0     0>
-            ;
+        default_layout: default_layout {
+            compatible = "zmk,physical-layout";
+            display-name = "Default Layout";
+            
+            // Link to the kscan and transform defined in your main shield file
+            kscan = <&kscan>;
+            transform = <&default_transform>;
+
+            // Format: &key_physical_attrs width height x_pos y_pos rotation rx ry
+            keys
+                = <
+                // Row 0 (8 keys)
+                &key_physical_attrs 100 100 100   0 0 0 0    &key_physical_attrs 100 100 200   0 0 0 0    &key_physical_attrs 100 100 300   0 0 0 0    &key_physical_attrs 100 100 400   0 0 0 0         &key_physical_attrs 100 100 700   0 0 0 0    &key_physical_attrs 100 100 800   0 0 0 0    &key_physical_attrs 100 100 900   0 0 0 0    &key_physical_attrs 100 100 1000   0 0 0 0
+                // Row 1 (10 keys)
+                &key_physical_attrs 100 100   0 100 0 0 0    &key_physical_attrs 100 100 100 100 0 0 0    &key_physical_attrs 100 100 200 100 0 0 0    &key_physical_attrs 100 100 300 100 0 0 0    &key_physical_attrs 100 100 400 100 0 0 0         &key_physical_attrs 100 100 700 100 0 0 0    &key_physical_attrs 100 100 800 100 0 0 0    &key_physical_attrs 100 100 900 100 0 0 0    &key_physical_attrs 100 100 1000 100 0 0 0    &key_physical_attrs 100 100 1100 100 0 0 0
+                // Row 2 (10 keys)
+                &key_physical_attrs 100 100   0 200 0 0 0    &key_physical_attrs 100 100 100 200 0 0 0    &key_physical_attrs 100 100 200 200 0 0 0    &key_physical_attrs 100 100 300 200 0 0 0    &key_physical_attrs 100 100 400 200 0 0 0         &key_physical_attrs 100 100 700 200 0 0 0    &key_physical_attrs 100 100 800 200 0 0 0    &key_physical_attrs 100 100 900 200 0 0 0    &key_physical_attrs 100 100 1000 200 0 0 0    &key_physical_attrs 100 100 1100 200 0 0 0
+                // Row 3 (10 keys)
+                &key_physical_attrs 100 100   0 300 0 0 0    &key_physical_attrs 100 100 100 300 0 0 0    &key_physical_attrs 100 100 200 300 0 0 0    &key_physical_attrs 100 100 300 300 0 0 0    &key_physical_attrs 100 100 400 300 0 0 0         &key_physical_attrs 100 100 700 300 0 0 0    &key_physical_attrs 100 100 800 300 0 0 0    &key_physical_attrs 100 100 900 300 0 0 0    &key_physical_attrs 100 100 1000 300 0 0 0    &key_physical_attrs 100 100 1100 300 0 0 0
+                // Row 4 (6 keys - offset in middle)
+                &key_physical_attrs 100 100   0 400 0 0 0    &key_physical_attrs 100 100 100 400 0 0 0    &key_physical_attrs 100 100 200 400 0 0 0                                                                                                   &key_physical_attrs 100 100 900 400 0 0 0    &key_physical_attrs 100 100 1000 400 0 0 0    &key_physical_attrs 100 100 1100 400 0 0 0
+                // Row 5 (10 keys - Bottom Row / Thumbs)
+                &key_physical_attrs 100 100   0 500 0 0 0    &key_physical_attrs 100 100 100 500 0 0 0    &key_physical_attrs 100 100 200 500 0 0 0    &key_physical_attrs 100 100 300 500 0 0 0    &key_physical_attrs 100 100 400 500 0 0 0         &key_physical_attrs 100 100 700 500 0 0 0    &key_physical_attrs 100 100 800 500 0 0 0    &key_physical_attrs 100 100 900 500 0 0 0    &key_physical_attrs 100 100 1000 500 0 0 0    &key_physical_attrs 100 100 1100 500 0 0 0
+                >;
+        };
     };
 };
