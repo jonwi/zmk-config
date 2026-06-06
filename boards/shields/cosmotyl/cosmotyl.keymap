@@ -46,12 +46,12 @@
         default_layer {
             //                                                            | |
             bindings = <
-                              &kp N2     &kp N3     &kp N4       &kp N5        &kp N6 &kp N7       &kp N8     &kp N9
-                &kp N1        &kp W      &kp E      &kp R        &kp T         &kp Y  &kp U        &kp I      &kp O      &kp NUMBER_0
-                &kp Q         &hml LGUI S &hml LALT D &hml LSHIFT F &hml G         &hmr H  &hmr RSHIFT J &hmr RALT K &hmr RGUI L &kp P
-                &hml LCTRL A   &kp X      &kp C      &kp V        &kp B         &kp N  &kp M        &kp COMMA  &kp PERIOD &hmr RCTRL SEMICOLON
-                &kp Z         &mkp MB4   &mkp MB1                                                  &bt BT_PRV &bt BT_NXT &kp FSLH
-                &kp BACKSPACE &mo 2      &kp HOME   &kp DELETE   &mo 1         &mo 2 &kp DELETE &kp END &kp ENTER &lt 1 SPACE 
+                              &kp N2      &kp N3      &kp N4        &kp N5        &kp N6 &kp N7        &kp N8      &kp N9
+                &kp N1        &kp W       &kp E       &kp R         &kp T         &kp Y  &kp U         &kp I       &kp O       &kp NUMBER_0
+                &kp Q         &hml LGUI S &hml LALT D &hml LSHIFT F &kp G         &kp H  &hmr RSHIFT J &hmr RALT K &hmr RGUI L &kp P
+                &hml LCTRL A  &kp X       &kp C       &kp V         &kp B         &kp N  &kp M         &kp COMMA   &kp PERIOD  &hmr RCTRL SEMICOLON
+                &kp Z         &mkp MB4    &mkp MB1                                                     &bt BT_PRV  &bt BT_NXT  &kp FSLH
+                &kp BACKSPACE &mo 2       &kp HOME    &kp DELETE    &mo 1         &mo 2  &kp DELETE    &kp END     &kp ENTER   &lt 1 SPACE 
             >;
         };
 
@@ -59,12 +59,12 @@
         layer1 {
             //                                                                       | |
             bindings = <
-                               &kp F2        &kp F3        &kp F4          &kp F5         &kp F8    &kp F9        &kp F10     &kp F11
-                &kp F1         &kp AT        &kp PIPE      &kp LBRC        &kp RBRC       &kp DQT   &kp N7        &kp N8      &kp N9      &kp F12
-                &kp EXCL       &hml LGUI DLLR &hml LALT BSLH &hml LSHIFT LPAR &kp RPAR       &kp EQUAL &hmr RSHIFT N4 &hmr RALT N5 &hmr RGUI N6 &kp STAR
-                &hml LCTRL HASH &kp CARET     &kp FSLH      &kp LBKT        &kp RBKT       &kp AMPS  &kp N1        &kp N2      &kp N3      &hmr RCTRL PLUS
-                &kp PRCNT      &trans        &trans                                                               &trans      &trans      &kp BSLH
-                &trans         &trans        &trans        &trans          &trans         &trans    &trans        &trans      &trans      &trans
+                               &kp F2        &kp F3        &kp F4          &kp F5         &kp F8    &kp F9         &kp F10      &kp F11
+                &kp F1         &kp AT        &kp PIPE      &kp LBRC        &kp RBRC       &kp DQT   &kp N7         &kp N8       &kp N9       &kp F12
+                &kp EXCL       &hml LGUI DLLR &hml LALT BSLH &hml LSHIFT LPAR &kp RPAR    &kp EQUAL &hmr RSHIFT N4 &hmr RALT N5 &hmr RGUI N6 &kp STAR
+                &hml LCTRL HASH &kp CARET     &kp FSLH      &kp LBKT        &kp RBKT      &kp AMPS  &kp N1         &kp N2       &kp N3       &hmr RCTRL PLUS
+                &kp PRCNT      &trans        &trans                                                                &trans       &trans       &kp BSLH
+                &trans         &trans        &trans        &trans          &trans         &trans    &trans         &trans       &trans       &trans
             >;
         };
 
@@ -72,12 +72,12 @@
         layer2 {
             //                                     | | 
             bindings = <
-                       &trans &trans &trans &trans     &trans    &trans   &trans   &trans
-                &trans &trans &trans &trans &trans     &kp STAR  &kp ESC  &kp UP   &trans          &trans
-                &trans &trans &trans &trans &trans     &kp MINUS &kp LEFT &kp DOWN &kp RIGHT       &trans
-                &trans &trans &trans &trans &trans     &kp AMPS  &kp TAB  &kp DQT  &trans          &trans
-                &trans &trans &bootloader                                 &bootloader   &studio_unlock  &trans
-                &trans &trans &trans &trans &trans     &trans    &trans   &trans   &trans          &trans
+                       &trans &trans &trans &trans     &trans    &trans   &trans      &trans
+                &trans &trans &trans &trans &trans     &kp STAR  &kp ESC  &kp UP      &trans         &trans
+                &trans &trans &trans &trans &trans     &kp MINUS &kp LEFT &kp DOWN    &kp RIGHT      &trans
+                &trans &trans &trans &trans &trans     &kp AMPS  &kp TAB  &kp DQT     &trans         &trans
+                &trans &trans &bootloader                                 &bootloader &studio_unlock &trans
+                &trans &trans &trans &trans &trans     &trans    &trans   &trans      &trans         &trans
             >;
         };
 
