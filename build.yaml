@@ -7,3 +7,5 @@ include:
   - board: nice_nano//zmk
     shield: cosmotyl_right
     cmake-args: -DCONFIG_ZMK_POINTING=y
+  - board: nice_nano//zmk
+    shield: settings_reset
