@@ -6,6 +6,7 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/rgb.h>
 
 / {
     // --- TIMELESS HOMEROW MODS ---
@@ -43,7 +44,7 @@
             #binding-cells = <1>; /* Takes 1 parameter for the tap key */
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&layer1_rgb>, <&kp>;
+            bindings = <&l1>, <&kp>;
         };
     };
 
