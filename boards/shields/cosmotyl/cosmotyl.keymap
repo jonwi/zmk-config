@@ -55,10 +55,10 @@
             tap-ms = <0>;
             bindings
                 = <&macro_press &mo 1>
-                , <&macro_tap &rgb_ug RGB_COLOR_HSB(55,169,54)> /* Green */
+                , <&macro_tap &rgb_ug RGB_COLOR_HSB(119,68,66)> /* Green */
                 , <&macro_pause_for_release>
                 , <&macro_release &mo 1>
-                , <&macro_tap &rgb_ug RGB_COLOR_HSB(54,144,169)>;  /* Blue */
+                , <&macro_tap &rgb_ug RGB_COLOR_HSB(193,68,66)>;  /* Blue */
         };
 
         l2: layer2_rgb {
@@ -68,7 +68,7 @@
             tap-ms = <0>;
             bindings
                 = <&macro_press &mo 2>
-                , <&macro_tap &rgb_ug RGB_COLOR_HSB(169,115,54)> /* Orange */
+                , <&macro_tap &rgb_ug RGB_COLOR_HSB(31,68,66)> /* Orange */
                 , <&macro_pause_for_release>
                 , <&macro_release &mo 2>
                 , <&macro_tap &rgb_ug RGB_COLOR_HSB(54,144,169)>;  /* Blue */
@@ -81,7 +81,7 @@
             tap-ms = <0>;
             bindings
                 = <&macro_tap &tog 3>
-                , <&macro_tap &rgb_ug RGB_COLOR_HSB(169,54,84)>; /* Red */
+                , <&macro_tap &rgb_ug RGB_COLOR_HSB(344,68,66)>; /* Red */
         };
 
         l3off: tog_off_rgb {
