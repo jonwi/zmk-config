@@ -3,9 +3,9 @@ include:
   - board: nice_nano//zmk
     shield: cosmotyl_left
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_POINTING=y -DCONFIG_ZMK_RGB_UNDERGLOW=y -DCONFIG_WS2812_STRIP=y
+    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_POINTING=y -DCONFIG_ZMK_RGB_UNDERGLOW=y
   - board: nice_nano//zmk
     shield: cosmotyl_right
-    cmake-args: -DCONFIG_ZMK_POINTING=y -CONFIG_ZMK_RGB_UNDERGLOW=y -CONFIG_WS2812_STRIP=y
+    cmake-args: -DCONFIG_ZMK_POINTING=y -CONFIG_ZMK_RGB_UNDERGLOW=y
   - board: nice_nano//zmk
     shield: settings_reset
