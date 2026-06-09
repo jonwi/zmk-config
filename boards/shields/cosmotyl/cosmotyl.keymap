@@ -109,7 +109,7 @@
                 &kp Q         &hml LGUI S &hml LALT D &hml LSHIFT F &kp G         &kp H  &hmr RSHIFT J &hmr RALT K &hmr RGUI L &kp P
                 &hml LCTRL A  &kp X       &kp C       &kp V         &kp B         &kp N  &kp M         &kp COMMA   &kp PERIOD  &hmr RCTRL SEMICOLON
                 &kp Z         &mkp MB4    &mkp MB1                                                     &kp DQT     &kp SQT     &kp FSLH
-                &kp BACKSPACE &l2         &kp HOME    &l3on         &l1           &l2    &kp DELETE    &kp END     &kp ENTER   &lt 1 SPACE 
+                &kp BACKSPACE &l2         &kp HOME    &l3on         &l1 1         &l2    &kp DELETE    &kp END     &kp ENTER   &lt 1 SPACE 
             >;
         };
 
