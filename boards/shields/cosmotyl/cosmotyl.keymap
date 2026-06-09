@@ -57,10 +57,10 @@
             tap-ms = <0>;
             bindings
                 = <&macro_press &mo 1>
-                , <&macro_tap &rgb_ug RGB_COLOR_HSB(119,68,66)> /* Green */
+                , <&macro_tap &rgb_ug RGB_COLOR_HSB(119,90,66)> /* Green */
                 , <&macro_pause_for_release>
                 , <&macro_release &mo 1>
-                , <&macro_tap &rgb_ug RGB_COLOR_HSB(193,68,66)>;  /* Blue */
+                , <&macro_tap &rgb_ug RGB_COLOR_HSB(193,90,66)>;  /* Blue */
         };
 
         l2: layer2_rgb {
@@ -70,10 +70,10 @@
             tap-ms = <0>;
             bindings
                 = <&macro_press &mo 2>
-                , <&macro_tap &rgb_ug RGB_COLOR_HSB(31,68,66)> /* Orange */
+                , <&macro_tap &rgb_ug RGB_COLOR_HSB(31,90,66)> /* Orange */
                 , <&macro_pause_for_release>
                 , <&macro_release &mo 2>
-                , <&macro_tap &rgb_ug RGB_COLOR_HSB(193,68,66)>;  /* Blue */
+                , <&macro_tap &rgb_ug RGB_COLOR_HSB(193,90,66)>;  /* Blue */
         };
 
         l3on: tog_on_rgb {
@@ -83,7 +83,7 @@
             tap-ms = <0>;
             bindings
                 = <&macro_tap &tog 3>
-                , <&macro_tap &rgb_ug RGB_COLOR_HSB(344,68,66)>; /* Red */
+                , <&macro_tap &rgb_ug RGB_COLOR_HSB(344,90,66)>; /* Red */
         };
 
         l3off: tog_off_rgb {
@@ -93,7 +93,7 @@
             tap-ms = <0>;
             bindings
                 = <&macro_tap &tog 3>
-                , <&macro_tap &rgb_ug RGB_COLOR_HSB(193,68,66)>; /* Blue */
+                , <&macro_tap &rgb_ug RGB_COLOR_HSB(193,90,66)>; /* Blue */
         };
     };
 
@@ -148,7 +148,7 @@
                 &trans &kp S     &kp D  &kp F  &trans     &trans &trans &trans &trans &trans
                 &kp A  &trans    &trans &trans &trans     &trans &trans &trans &trans &trans
                 &trans &kp RCTRL &kp RALT                               &trans &trans &trans
-                &trans &trans    &trans &trans &l3off     &trans &trans &trans &trans &trans
+                &trans &trans    &trans &l3off &trans     &trans &trans &trans &trans &trans
             >;
         };
     };
