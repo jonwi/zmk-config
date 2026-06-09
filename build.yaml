@@ -6,6 +6,6 @@ include:
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_POINTING=y -DCONFIG_ZMK_RGB_UNDERGLOW=y
   - board: nice_nano//zmk
     shield: cosmotyl_right
-    cmake-args: -DCONFIG_ZMK_POINTING=y -CONFIG_ZMK_RGB_UNDERGLOW=y
+    cmake-args: -DCONFIG_ZMK_POINTING=y -DCONFIG_ZMK_RGB_UNDERGLOW=y
   - board: nice_nano//zmk
     shield: settings_reset
