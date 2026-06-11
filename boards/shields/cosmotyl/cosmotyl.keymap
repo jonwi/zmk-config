@@ -40,6 +40,30 @@
             bindings = <&kp>, <&kp>;
         };
 
+        hms_l: homerow_shift_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_SHIFT_LEFT";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>; // Faster resolve time than your normal 280ms
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <4 5 6 7 13 14 15 16 17 23 24 25 26 27 33 34 35 36 37 41 42 43 49 50 51 52 53>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        hms_r: homerow_shift_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_SHIFT_RIGHT";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>; 
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 8 9 10 11 12 18 19 20 21 22 28 29 30 31 32 38 39 40 44 45 46 47 48>;
+            bindings = <&kp>, <&kp>;
+        };
+
     };
 
     keymap {
@@ -49,12 +73,12 @@
         default_layer {
             //                                                              | |
             bindings = <
-                              &kp N2      &kp N3      &kp N4        &kp N5        &kp N6 &kp N7        &kp N8      &kp N9
-                &kp N1        &kp W       &kp E       &kp R         &kp T         &kp Y  &kp U         &kp I       &kp O       &kp NUMBER_0
-                &kp Q         &hml LGUI S &hml LALT D &hml LSHIFT F &kp G         &kp H  &hmr RSHIFT J &hmr RALT K &hmr RGUI L &kp P
-                &hml LCTRL A  &kp X       &kp C       &kp V         &kp B         &kp N  &kp M         &kp COMMA   &kp PERIOD  &hmr RCTRL SEMICOLON
-                &kp Z         &mkp MB4    &mkp MB1                                                     &kp DQT     &kp SQT     &kp FSLH
-                &kp BACKSPACE &mo 2       &kp HOME    &tog 3        &mo 1         &mo 2  &kp DELETE    &kp END     &kp ENTER   &lt 1 SPACE 
+                              &kp N2      &kp N3      &kp N4          &kp N5        &kp N6 &kp N7          &kp N8      &kp N9
+                &kp N1        &kp W       &kp E       &kp R           &kp T         &kp Y  &kp U           &kp I       &kp O       &kp NUMBER_0
+                &kp Q         &hml LGUI S &hml LALT D &hms_l LSHIFT F &kp G         &kp H  &hms_r RSHIFT J &hmr RALT K &hmr RGUI L &kp P
+                &hml LCTRL A  &kp X       &kp C       &kp V           &kp B         &kp N  &kp M           &kp COMMA   &kp PERIOD  &hmr RCTRL SEMICOLON
+                &kp Z         &mkp MB4    &mkp MB1                                                         &kp DQT     &kp SQT     &kp FSLH
+                &kp BACKSPACE &mo 2       &kp HOME    &tog 3          &mo 1         &mo 2  &kp DELETE      &kp END     &kp ENTER   &lt 1 SPACE 
             >;
         };
 
