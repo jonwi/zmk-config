@@ -41,8 +41,13 @@ static int layer_color_listener_cb(const zmk_event_t *eh) {
         .param2 = RGB_COLOR_HSB_VAL(h, s, b)
     };
 
-    zmk_behavior_invoke(&binding, true);
-    zmk_behavior_invoke(&binding, false);
+    struct zmk_behavior_binding_event event = {
+        .position = 0,
+        .timestamp = k_uptime_get()
+    };
+
+    zmk_behavior_invoke(&binding, event, true);
+    zmk_behavior_invoke(&binding, event, false);
 
     return ZMK_EV_EVENT_BUBBLE;
 }
