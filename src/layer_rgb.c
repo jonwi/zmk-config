@@ -40,8 +40,8 @@ static int layer_color_listener_cb(const zmk_event_t *eh) {
         .timestamp = k_uptime_get()
     };
 
-    behavior_key_press_invoke(&binding, event);
-    behavior_key_release_invoke(&binding, event);
+    zmk_behavior_queue_add(&event, binding, true, 0)
+
     return ZMK_EV_EVENT_BUBBLE;
 }
 
