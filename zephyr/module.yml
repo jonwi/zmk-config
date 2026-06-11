@@ -1,3 +1,5 @@
+name: cosmotyl_module
 build:
+  cmake: .
   settings:
     board_root: .
