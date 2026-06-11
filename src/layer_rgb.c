@@ -1,7 +1,8 @@
 #include <zephyr/kernel.h>
+#include <zephyr/device.h>
+#include <zephyr/devicetree.h>
 #include <zmk/events/layer_state_changed.h>
 #include <zmk/event_manager.h>
-#include <zmk/rgb_underglow.h>
 #include <zmk/keymap.h>
 #include <zmk/behavior.h>
 #include <dt-bindings/zmk/rgb.h>
@@ -29,18 +30,19 @@ static int layer_color_listener_cb(const zmk_event_t *eh) {
             break;
     }
 
+    const struct device *rgb_dev = DEVICE_DT_GET(DT_NODELABEL(rgb_ug));
+    if (!device_is_ready(rgb_dev)){
+        return ZMK_EV_EVENT_BUBBLE;
+    }
+
     struct zmk_behavior_binding binding = {
-        .behavior_dev = "RGB_UG",
+        .behavior_dev = DEVICE_DT_NAME(DT_NODELABEL(rgb_ug)),
         .param1 = RGB_COLOR_HSB_CMD,
         .param2 = RGB_COLOR_HSB_VAL(h, s, b)
     };
 
-    struct zmk_behavior_binding_event event = {
-        .position = 0,
-        .timestamp = k_uptime_get()
-    };
-
-    zmk_behavior_queue_add(&event, binding, true, 0);
+    zmk_behavior_invoke(&binding, true);
+    zmk_behavior_invoke(&binding, false);
 
     return ZMK_EV_EVENT_BUBBLE;
 }
