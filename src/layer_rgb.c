@@ -28,5 +28,5 @@ static int layer_color_listener_cb(const zmk_event_t *eh) {
     return ZMK_EV_EVENT_BUBBLE;
 }
 
-ZMK_LISTENER(layer_color_listener, layer_color_listener_c);
+ZMK_LISTENER(layer_color_listener, layer_color_listener_cb);
 ZMK_SUBSCRIPTION(layer_color_listener, zmk_layer_state_changed);
