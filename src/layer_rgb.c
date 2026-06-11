@@ -3,28 +3,45 @@
 #include <zmk/event_manager.h>
 #include <zmk/rgb_underglow.h>
 #include <zmk/keymap.h>
+#include <zmk/behavior.h>
+#include <dt-bindings/zmk/rgb.h>
 
 static int layer_color_listener_cb(const zmk_event_t *eh) {
     uint8_t active_layer = zmk_keymap_highest_layer_active();
 
+    uint32_t h = 0, s = 100, b = 100;
     switch (active_layer) {
         case 1:
             /* Turn Green for Layer 1 */
-            zmk_rgb_underglow_set_hsb((struct zmk_led_hsb){119, 100, 100});
+            h = 119;
             break;
         case 2:
             /* Turn Orange for Layer 2 */
-            zmk_rgb_underglow_set_hsb((struct zmk_led_hsb){31, 100, 100});
+            h = 31;
             break;
         case 3:
             /* Turn Pink for Layer 3 */
-            zmk_rgb_underglow_set_hsb((struct zmk_led_hsb){344, 100, 100});
+            h = 344;
             break;
         default:
             /* Turn Blue for Default Base Layer */
-            zmk_rgb_underglow_set_hsb((struct zmk_led_hsb){193, 100, 100});
+            h = 193;
             break;
     }
+
+    struct zmk_behavior_binding binding = {
+        .behavior_dev = "RGB_UG",
+        .param1 = RGB_COLOR_HSB_CMD,
+        .param2 = RGB_COLOR_HSB_VAL(h, s, b)
+    };
+
+    struct zmk_behavior_binding_event event = {
+        .position = 0,
+        .timestamp = k_uptime_get()
+    }
+
+    behavior_key_press_invoke(&binding, event);
+    behavior_key_release_invoke(&binding, event);
     return ZMK_EV_EVENT_BUBBLE;
 }
 
