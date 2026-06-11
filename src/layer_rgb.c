@@ -38,7 +38,7 @@ static int layer_color_listener_cb(const zmk_event_t *eh) {
     struct zmk_behavior_binding_event event = {
         .position = 0,
         .timestamp = k_uptime_get()
-    }
+    };
 
     behavior_key_press_invoke(&binding, event);
     behavior_key_release_invoke(&binding, event);
