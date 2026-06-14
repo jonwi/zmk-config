@@ -78,12 +78,25 @@
                 &kp Q         &hml LGUI S &hml LALT D &hms_l LSHIFT F &kp G         &kp H  &hms_r RSHIFT J &hmr RALT K &hmr RGUI L &kp P
                 &hml LCTRL A  &kp X       &kp C       &kp V           &kp B         &kp N  &kp M           &kp COMMA   &kp PERIOD  &hmr RCTRL SEMICOLON
                 &kp Z         &mkp MB4    &mkp MB1                                                         &kp DQT     &kp SQT     &kp FSLH
-                &kp BACKSPACE &mo 2       &kp HOME    &tog 3          &mo 1         &mo 2  &kp DELETE      &kp END     &kp ENTER   &lt 1 SPACE 
+                &kp BACKSPACE &mo 3       &kp HOME    &tog 1          &mo 2         &mo 3  &kp DELETE      &kp END     &kp ENTER   &lt 2 SPACE 
+            >;
+        };
+
+        // Gaming layer
+        layer1 {
+            //                                    | | 
+            bindings = <
+                       &trans    &trans &trans &kp ESC    &trans &trans &trans &trans
+                &trans &trans    &trans &trans &trans     &trans &trans &trans &trans &trans
+                &trans &kp S     &kp D  &kp F  &trans     &trans &trans &trans &trans &trans
+                &kp A  &trans    &trans &trans &trans     &trans &trans &trans &trans &trans
+                &trans &kp RCTRL &kp RALT                               &trans &trans &trans
+                &trans &trans    &trans &trans &trans     &trans &trans &trans &trans &trans
             >;
         };
 
         // symbol layer
-        layer1 {
+        layer2 {
             //                                                                         | |
             bindings = <
                                 &kp F2         &kp F3         &kp F4           &kp F5      &kp F8    &kp F9         &kp F10      &kp F11
@@ -96,7 +109,7 @@
         };
 
         // movement and symbol layer
-        layer2 {
+        layer3 {
             //                                                                       | | 
             bindings = <
                              &bt BT_SEL 1      &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &out OUT_BLE &out OUT_USB &trans      &trans
@@ -108,17 +121,5 @@
             >;
         };
 
-        // Gaming layer
-        layer3 {
-            //                                    | | 
-            bindings = <
-                       &trans    &trans &trans &kp ESC    &trans &trans &trans &trans
-                &trans &trans    &trans &trans &trans     &trans &trans &trans &trans &trans
-                &trans &kp S     &kp D  &kp F  &trans     &trans &trans &trans &trans &trans
-                &kp A  &trans    &trans &trans &trans     &trans &trans &trans &trans &trans
-                &trans &kp RCTRL &kp RALT                               &trans &trans &trans
-                &trans &trans    &trans &trans &trans     &trans &trans &trans &trans &trans
-            >;
-        };
     };
 };
