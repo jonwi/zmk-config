@@ -58,17 +58,6 @@
             bindings = <&kp>, <&kp>;
         };
 
-        shift_cw: shift_caps_word {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>; 
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            flavor = "balanced";
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <4 5 6 7 13 14 15 16 17 23 24 25 26 27 33 34 35 36 37 41 42 43 49 50 51 52 53>;
-            bindings = <&kp LSHIFT>, <&caps_word>;
-        };
-
     };
 
     keymap {
@@ -119,7 +108,7 @@
             bindings = <
                              &bt BT_SEL 1      &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &out OUT_BLE &out OUT_USB &trans      &trans
                 &bt BT_SEL 0 &trans            &trans       &trans       &trans           &kp STAR     &kp ESC      &kp UP      &trans         &trans
-                &bt BT_CLR   &trans            &trans       &shift_cw    &trans           &kp MINUS    &kp LEFT     &kp DOWN    &kp RIGHT      &trans
+                &bt BT_CLR   &trans            &trans       &trans       &caps_word           &kp MINUS    &kp LEFT     &kp DOWN    &kp RIGHT      &trans
                 &trans       &trans            &trans       &trans       &trans           &kp AMPS     &kp TAB      &kp DQT     &trans         &trans
                 &trans       &ext_power EP_TOG &bootloader                                                              &bootloader &studio_unlock &trans
                 &trans       &trans            &trans       &trans       &trans           &trans       &trans       &trans      &trans         &trans
