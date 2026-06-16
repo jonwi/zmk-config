@@ -67,7 +67,7 @@
         shift_cw: shift_caps_word {
             compatible = "zmk,behavior-hold-tap";
             label = "SHIFT_CAPS_WORD";
-            #binding-cells = <1>; // 1 parameter for &kp, 0 for &caps_word
+            #binding-cells = <2>; 
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             flavor = "balanced";
@@ -125,12 +125,12 @@
         layer3 {
             //                                                                       | | 
             bindings = <
-                             &bt BT_SEL 1      &bt BT_SEL 2 &bt BT_SEL 3     &bt BT_SEL 4     &out OUT_BLE &out OUT_USB &trans      &trans
-                &bt BT_SEL 0 &trans            &trans       &trans           &trans           &kp STAR     &kp ESC      &kp UP      &trans         &trans
-                &bt BT_CLR   &trans            &trans       &shift_cw LSHIFT &trans           &kp MINUS    &kp LEFT     &kp DOWN    &kp RIGHT      &trans
-                &trans       &trans            &trans       &trans           &trans           &kp AMPS     &kp TAB      &kp DQT     &trans         &trans
+                             &bt BT_SEL 1      &bt BT_SEL 2 &bt BT_SEL 3       &bt BT_SEL 4     &out OUT_BLE &out OUT_USB &trans      &trans
+                &bt BT_SEL 0 &trans            &trans       &trans             &trans           &kp STAR     &kp ESC      &kp UP      &trans         &trans
+                &bt BT_CLR   &trans            &trans       &shift_cw LSHIFT 0 &trans           &kp MINUS    &kp LEFT     &kp DOWN    &kp RIGHT      &trans
+                &trans       &trans            &trans       &trans             &trans           &kp AMPS     &kp TAB      &kp DQT     &trans         &trans
                 &trans       &ext_power EP_TOG &bootloader                                                              &bootloader &studio_unlock &trans
-                &trans       &trans            &trans       &trans           &trans           &trans       &trans       &trans      &trans         &trans
+                &trans       &trans            &trans       &trans             &trans           &trans       &trans       &trans      &trans         &trans
             >;
         };
 
