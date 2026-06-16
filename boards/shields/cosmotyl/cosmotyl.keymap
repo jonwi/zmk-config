@@ -64,6 +64,19 @@
             bindings = <&kp>, <&kp>;
         };
 
+        shift_cw: shift_caps_word {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SHIFT_CAPS_WORD";
+            #binding-cells = <1>; // 1 parameter for &kp, 0 for &caps_word
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            // Triggers: All keys on the RIGHT side (copied from your hms_l)
+            hold-trigger-key-positions = <4 5 6 7 13 14 15 16 17 23 24 25 26 27 33 34 35 36 37 41 42 43 49 50 51 52 53>;
+            bindings = <&kp>, <&caps_word>;
+        };
+
     };
 
     keymap {
@@ -97,14 +110,14 @@
 
         // symbol layer
         layer2 {
-            //                                                                         | |
+            //                                                                           | |
             bindings = <
-                                &kp F2         &kp F3         &kp F4           &kp F5      &kp F8    &kp F9         &kp F10      &kp F11
-                &kp F1          &kp AT         &kp PIPE       &kp LBRC         &kp RBRC    &kp DQT   &kp N7         &kp N8       &kp N9       &kp F12
-                &kp EXCL        &hml LGUI DLLR &hml LALT BSLH &hml LSHIFT LPAR &kp RPAR    &kp EQUAL &hmr RSHIFT N4 &hmr RALT N5 &hmr RGUI N6 &kp STAR
-                &hml LCTRL HASH &kp CARET      &kp FSLH       &kp LBKT         &kp RBKT    &kp AMPS  &kp N1         &kp N2       &kp N3       &hmr RCTRL PLUS
-                &kp PRCNT       &kp GRAVE      &kp TILDE                                                            &trans       &trans       &kp BSLH
-                &trans          &trans         &trans         &trans           &trans      &trans    &trans         &trans       &trans       &trans
+                                &kp F2         &kp F3         &kp F4             &kp F5      &kp F8    &kp F9           &kp F10      &kp F11
+                &kp F1          &kp AT         &kp PIPE       &kp LBRC           &kp RBRC    &kp DQT   &kp N7           &kp N8       &kp N9       &kp F12
+                &kp EXCL        &hml LGUI DLLR &hml LALT BSLH &hms_l LSHIFT LPAR &kp RPAR    &kp EQUAL &hms_r RSHIFT N4 &hmr RALT N5 &hmr RGUI N6 &kp STAR
+                &hml LCTRL HASH &kp CARET      &kp FSLH       &kp LBKT           &kp RBKT    &kp AMPS  &kp N1           &kp N2       &kp N3       &hmr RCTRL PLUS
+                &kp PRCNT       &kp GRAVE      &kp TILDE                                                                &trans       &trans       &kp BSLH
+                &trans          &trans         &trans         &trans             &trans      &trans    &trans           &trans       &trans       &trans
             >;
         };
 
@@ -112,12 +125,12 @@
         layer3 {
             //                                                                       | | 
             bindings = <
-                             &bt BT_SEL 1      &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &out OUT_BLE &out OUT_USB &trans      &trans
-                &bt BT_SEL 0 &trans            &trans       &trans       &trans           &kp STAR     &kp ESC      &kp UP      &trans         &trans
-                &bt BT_CLR   &trans            &trans       &caps_word   &trans           &kp MINUS    &kp LEFT     &kp DOWN    &kp RIGHT      &trans
-                &trans       &trans            &trans       &trans       &trans           &kp AMPS     &kp TAB      &kp DQT     &trans         &trans
-                &trans       &ext_power EP_TOG &bootloader                                                          &bootloader &studio_unlock &trans
-                &trans       &trans            &trans       &trans       &trans           &trans       &trans       &trans      &trans         &trans
+                             &bt BT_SEL 1      &bt BT_SEL 2 &bt BT_SEL 3     &bt BT_SEL 4     &out OUT_BLE &out OUT_USB &trans      &trans
+                &bt BT_SEL 0 &trans            &trans       &trans           &trans           &kp STAR     &kp ESC      &kp UP      &trans         &trans
+                &bt BT_CLR   &trans            &trans       &shift_cw LSHIFT &trans           &kp MINUS    &kp LEFT     &kp DOWN    &kp RIGHT      &trans
+                &trans       &trans            &trans       &trans           &trans           &kp AMPS     &kp TAB      &kp DQT     &trans         &trans
+                &trans       &ext_power EP_TOG &bootloader                                                              &bootloader &studio_unlock &trans
+                &trans       &trans            &trans       &trans           &trans           &trans       &trans       &trans      &trans         &trans
             >;
         };
 
