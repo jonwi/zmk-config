@@ -97,7 +97,7 @@
                 &kp F1          &kp AT         &kp PIPE       &kp LBRC           &kp RBRC    &kp DQT   &kp N7           &kp N8       &kp N9       &kp F12
                 &kp EXCL        &hml LGUI DLLR &hml LALT BSLH &hms_l LSHIFT LPAR &kp RPAR    &kp EQUAL &hms_r RSHIFT N4 &hmr RALT N5 &hmr RGUI N6 &kp STAR
                 &hml LCTRL HASH &kp CARET      &kp FSLH       &kp LBKT           &kp RBKT    &kp AMPS  &kp N1           &kp N2       &kp N3       &hmr RCTRL PLUS
-                &kp PRCNT       &kp GRAVE      &kp TILDE                                                                &kp N0       &trans       &kp BSLH
+                &kp PRCNT       &kp GRAVE      &kp TILDE                                                                &kp N0       &kp MINUS    &kp BSLH
                 &trans          &trans         &trans         &trans             &trans      &trans    &trans           &trans       &trans       &trans
             >;
         };
