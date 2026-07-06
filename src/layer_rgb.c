@@ -10,7 +10,7 @@
 static int layer_color_listener_cb(const zmk_event_t *eh) {
     uint8_t active_layer = zmk_keymap_highest_layer_active();
 
-    uint32_t h = 0, s = 100, b = 50;
+    uint32_t h = 0, s = 100, b = 20;
     switch (active_layer) {
         case 1:
             /* Turn Pink */
