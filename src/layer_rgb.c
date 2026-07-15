@@ -13,20 +13,23 @@ static int layer_color_listener_cb(const zmk_event_t *eh) {
     uint32_t h = 0, s = 100, b = 20;
     switch (active_layer) {
         case 1:
-            /* Turn Pink */
-            h = 344;
+            /* Turn Red */
+            h = 0;
             break;
         case 2:
             /* Turn Green */
-            h = 119;
+            h = 120;
             break;
         case 3:
-            /* Turn Orange */
-            h = 31;
+            /* Turn yellow */
+            h = 60;
+            break;
+        case 4:
+            h = 280; // purple
             break;
         default:
             /* Turn Blue */
-            h = 193;
+            h = 190;
             break;
     }
 

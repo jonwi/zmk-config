@@ -2,7 +2,6 @@
 include:
   - board: nice_nano//zmk
     shield: cosmotyl_left
-    snippet: zmk-usb-logging
   - board: nice_nano//zmk
     shield: cosmotyl_right
   - board: nice_nano//zmk
