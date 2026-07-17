@@ -101,14 +101,14 @@
 
         // movement and symbol layer
         layer3 {
-            //                                               | | 
+            //                                                                      | | 
             bindings = <
-                       &trans    &trans     &trans     &trans           &trans       &trans       &trans      &trans
-                &trans &trans    &kp PG_UP  &trans     &trans           &kp STAR     &kp ESC      &kp UP      &trans         &trans
-                &trans &hml HOME &hml PG_DN &hms_l END &caps_word       &kp MINUS    &kp LEFT     &kp DOWN    &kp RIGHT      &trans
-                &trans &trans    &trans     &kp DEL    &trans           &kp AMPS     &kp TAB      &kp ENTER   &kp ENTER      &trans
-                &trans &trans    &trans                                                           &trans      &trans         &trans
-                &trans &trans    &trans     &trans     &trans           &trans       &trans       &trans      &trans         &trans
+                       &trans         &trans          &trans            &trans           &trans       &trans       &trans      &trans
+                &trans &trans         &kp PG_UP       &trans            &trans           &kp STAR     &kp ESC      &kp UP      &trans         &trans
+                &trans &hml LGUI HOME &hml LALT PG_DN &hms_l LSHIFT END &caps_word       &kp MINUS    &kp LEFT     &kp DOWN    &kp RIGHT      &trans
+                &trans &trans         &trans          &kp DEL           &trans           &kp AMPS     &kp TAB      &kp ENTER   &kp ENTER      &trans
+                &trans &trans         &trans                                                           &trans      &trans         &trans
+                &trans &trans         &trans          &trans            &trans           &trans       &trans       &trans      &trans         &trans
             >;
         };
 
